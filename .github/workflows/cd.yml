@@ -37,3 +37,6 @@ jobs:
         run: >
           gcloud builds submit 
           --tag northamerica-northeast1-docker.pkg.dev/storied-legend-299117/notely-ar-repo/notely:latest
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely --image northamerica-northeast1-docker.pkg.dev/storied-legend-299117/notely-ar-repo/notely:latest
+    
